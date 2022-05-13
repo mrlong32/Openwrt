@@ -21,8 +21,8 @@ on:
     inputs:
       ssh:
         description: 'SSH connection to Actions'
-        required: false
-        default: 'false'
+        required: true
+        default: 'true'
   
 env:
   REMOTE_PATH: drive:Public/Openwrt/Package
