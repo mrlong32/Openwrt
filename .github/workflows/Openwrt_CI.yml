@@ -17,6 +17,17 @@ on:
   #   - cron: 0 20 * * *
   release:
     types: [published]
+  workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
+  
+env:
+  REMOTE_PATH: drive:Public/Openwrt/Package
+  VERSION: 22.03
+  USE_TG: false
 
 jobs:
 
