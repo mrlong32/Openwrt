@@ -8,8 +8,8 @@
 #include "qca956x.dtsi"
 
 / {
-	model = "A CSAC2";
-	compatible = "Awrt,csac2", "qca,qca9563";
+	model = "Xwrt CSAC2";
+	compatible = "xwrt,csac2", "qca,qca9563";
 
 	aliases {
 		led-boot = &led_sys;
