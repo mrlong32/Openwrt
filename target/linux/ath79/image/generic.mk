@@ -2645,8 +2645,8 @@ define Device/xwrt_csac2
   IMAGES += breed-factory.bin factory-10.bin factory-05.bin
   IMAGE/breed-factory.bin := append-kernel | pad-to $$$$(BLOCKSIZE) | append-rootfs | pad-rootfs | \
 			     prepad-okli-kernel $(1) | pad-to 14528k | append-okli-kernel $(1)
-  IMAGE/factory-10.bin := $$(IMAGE/breed-factory.bin) | a_csac10-factory $(1)
-  IMAGE/factory-05.bin := $$(IMAGE/breed-factory.bin) | a_csac05-factory $(1)
+  IMAGE/factory-10.bin := $$(IMAGE/breed-factory.bin) | xwrt_csac10-factory $(1)
+  IMAGE/factory-05.bin := $$(IMAGE/breed-factory.bin) | xwrt_csac05-factory $(1)
   DEVICE_PACKAGES := kmod-leds-reset kmod-ath10k-ct ath10k-firmware-qca9888-ct kmod-usb-core kmod-usb2 lte-modem-xwrt-csac
 endef
 TARGET_DEVICES += xwrt_csac2
