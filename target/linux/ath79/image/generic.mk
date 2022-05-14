@@ -2637,7 +2637,7 @@ endef
 define Device/xwrt_csac2
   $(Device/loader-okli-uimage)
   SOC := qca9563
-  DEVICE_VENDOR := A
+  DEVICE_VENDOR := XWRT
   DEVICE_MODEL := CSAC2
   IMAGE_SIZE := 14464k
   LOADER_FLASH_OFFS := 0x60000
@@ -2649,4 +2649,4 @@ define Device/xwrt_csac2
   IMAGE/factory-05.bin := $$(IMAGE/breed-factory.bin) | a_csac05-factory $(1)
   DEVICE_PACKAGES := kmod-leds-reset kmod-ath10k-ct ath10k-firmware-qca9888-ct kmod-usb-core kmod-usb2 lte-modem-xwrt-csac
 endef
-TARGET_DEVICES += a_csac2
+TARGET_DEVICES += xwrt_csac2
